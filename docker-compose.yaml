@@ -1,0 +1,11 @@
+version: '2.1'
+
+services:
+
+  promk:
+    container_name: promik
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 9099:9090
