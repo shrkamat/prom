@@ -2,10 +2,15 @@ version: '2.1'
 
 services:
 
-  promk:
-    container_name: promik
+  prom:
+    container_name: ivp-prom
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 9099:9090
+            - 9999:9090
+
+  graphana:
+    image: "grafana/grafana"
+    ports:
+      - 3000:3000
